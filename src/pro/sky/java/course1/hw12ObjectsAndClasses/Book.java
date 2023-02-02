@@ -23,7 +23,7 @@ public class Book {
         return this.bookName;
     }
 
-    public Author getnameAuthor() {
+    public Author getNameAuthor() {
         return this.nameAuthor;
     }
 
