@@ -27,12 +27,10 @@ public class Main {
         Author authorTolstoy = new Author("Лев", "Толстой");
         System.out.print(authorTolstoy.getNameAuthor() + " ");
         System.out.println(authorTolstoy.getSonameAuthor());
-        System.out.println();
 
         Author authorDuma = new Author("Александр", "Дюма");
         System.out.print(authorDuma.getNameAuthor() + " ");
         System.out.println(authorDuma.getSonameAuthor());
-        System.out.println();
 
         Author authorTurgenev = new Author("Иван", "Тургенев");
         System.out.print(authorTurgenev.getNameAuthor() + " ");
