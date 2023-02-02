@@ -10,7 +10,7 @@ package pro.sky.java.course1.hw12ObjectsAndClasses;
 
 public class Book {
     private String bookName;
-    Author nameAuthor;
+    private Author nameAuthor;
     private int publisherYear;
 
     public Book(String bookName, Author nameAuthor, int publisherYear) {
