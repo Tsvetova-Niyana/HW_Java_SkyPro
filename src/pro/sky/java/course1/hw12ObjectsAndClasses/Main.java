@@ -2,7 +2,6 @@ package pro.sky.java.course1.hw12ObjectsAndClasses;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Задание 1");
         /*
         Напишите небольшой библиотечный справочник, где хранится информация о книгах.
 
@@ -25,28 +24,37 @@ public class Main {
         В том же методе main измените год публикации одной из книг с помощью сеттера.
         Так как вы изучили геттеры и сеттеры, оставлять поля открытыми, без модификатора доступа private, недопустимо.
          */
-        Author author1 = new Author("Лев Толстой");
-        System.out.println(author1.getNameAuthor());
+        Author authorTolstoy = new Author("Лев Толстой");
+        System.out.println(authorTolstoy.getNameAuthor());
 
-        Author author2 = new Author("Александр Дюма");
-        System.out.println(author2.getNameAuthor());
+        Author authorDuma = new Author("Александр Дюма");
+        System.out.println(authorDuma.getNameAuthor());
 
-        Author author3 = new Author("Иван Тургенев");
-        System.out.println(author2.getNameAuthor());
+        Author authorTurgenev = new Author("Иван Тургенев");
+        System.out.println(authorTurgenev.getNameAuthor());
+        System.out.println();
 
-        Book book1 = new Book("Война и мир", author1.getNameAuthor(), 1986);
-        System.out.println("book1.bookName = " + book1.getBookName());
-        System.out.println("book1.nameAuthor = " + book1.getnameAuthor());
-        System.out.println("book1.publisherYear = " + book1.getPublisherYear());
+        Book bookWarAndPeace = new Book("Война и мир", authorTolstoy.getNameAuthor(), 1986);
+        System.out.println("book1.bookName = " + bookWarAndPeace.getBookName());
+        System.out.println("book1.nameAuthor = " + bookWarAndPeace.getnameAuthor());
+        System.out.println("book1.publisherYear = " + bookWarAndPeace.getPublisherYear());
+        System.out.println();
 
-        Book book2 = new Book("Граф Монте-Кристо", author2.getNameAuthor(), 2017);
-        System.out.println("book1.bookName = " + book1.getBookName());
-        System.out.println("book1.nameAuthor = " + book1.getnameAuthor());
-        System.out.println("book1.publisherYear = " + book1.getPublisherYear());
+        Book countMonteCristo = new Book("Граф Монте-Кристо", authorDuma.getNameAuthor(), 2017);
+        System.out.println("book1.bookName = " + countMonteCristo.getBookName());
+        System.out.println("book1.nameAuthor = " + countMonteCristo.getnameAuthor());
+        System.out.println("book1.publisherYear = " + countMonteCristo.getPublisherYear());
+        System.out.println();
 
-        Book book3 = new Book("Отцы и дети", author3.getNameAuthor(), 2002);
-        System.out.println("book1.bookName = " + book1.getBookName());
-        System.out.println("book1.nameAuthor = " + book1.getnameAuthor());
-        System.out.println("book1.publisherYear = " + book1.getPublisherYear());
+        Book FathersAndChildren = new Book("Отцы и дети", authorTurgenev.getNameAuthor(), 2002);
+        System.out.println("book1.bookName = " + FathersAndChildren.getBookName());
+        System.out.println("book1.nameAuthor = " + FathersAndChildren.getnameAuthor());
+        System.out.println("book1.publisherYear = " + FathersAndChildren.getPublisherYear());
+        System.out.println();
+
+        bookWarAndPeace.setPublisherYear(2006);
+        System.out.println("book1.bookName = " + bookWarAndPeace.getBookName());
+        System.out.println("book1.nameAuthor = " + bookWarAndPeace.getnameAuthor());
+        System.out.println("book1.publisherYear = " + bookWarAndPeace.getPublisherYear());
     }
 }
