@@ -25,40 +25,45 @@ public class Main {
         Так как вы изучили геттеры и сеттеры, оставлять поля открытыми, без модификатора доступа private, недопустимо.
          */
         Author authorTolstoy = new Author("Лев", "Толстой");
-        System.out.println(authorTolstoy.getNameAuthor());
+        System.out.print(authorTolstoy.getNameAuthor() + " ");
+        System.out.println(authorTolstoy.getSonameAuthor());
+        System.out.println();
 
         Author authorDuma = new Author("Александр", "Дюма");
-        System.out.println(authorDuma.getNameAuthor());
+        System.out.print(authorDuma.getNameAuthor() + " ");
+        System.out.println(authorDuma.getSonameAuthor());
+        System.out.println();
 
         Author authorTurgenev = new Author("Иван", "Тургенев");
-        System.out.println(authorTurgenev.getNameAuthor());
+        System.out.print(authorTurgenev.getNameAuthor() + " ");
+        System.out.println(authorTurgenev.getSonameAuthor());
         System.out.println();
 
         Book bookWarAndPeace = new Book("Война и мир", authorTolstoy, 1986);
-        System.out.println("book1.bookName = " + bookWarAndPeace.getBookName());
-        System.out.println("book1.nameAuthor = " + bookWarAndPeace.getNameAuthor().getNameAuthor() + " " +
+        System.out.println("bookWarAndPeace.bookName = " + bookWarAndPeace.getBookName());
+        System.out.println("bookWarAndPeace.nameAuthor = " + bookWarAndPeace.getNameAuthor().getNameAuthor() + " " +
                 bookWarAndPeace.getNameAuthor().getSonameAuthor());
-        System.out.println("book1.publisherYear = " + bookWarAndPeace.getPublisherYear());
+        System.out.println("bookWarAndPeace.publisherYear = " + bookWarAndPeace.getPublisherYear());
         System.out.println();
 
-        Book countMonteCristo = new Book("Граф Монте-Кристо", authorDuma, 2017);
-        System.out.println("book1.bookName = " + countMonteCristo.getBookName());
-        System.out.println("book1.nameAuthor = " + countMonteCristo.getNameAuthor().getNameAuthor()+ " " +
-                countMonteCristo.getNameAuthor().getSonameAuthor());
-        System.out.println("book1.publisherYear = " + countMonteCristo.getPublisherYear());
+        Book bookCountMonteCristo = new Book("Граф Монте-Кристо", authorDuma, 2017);
+        System.out.println("bookCountMonteCristo.bookName = " + bookCountMonteCristo.getBookName());
+        System.out.println("bookCountMonteCristo.nameAuthor = " + bookCountMonteCristo.getNameAuthor().getNameAuthor() + " " +
+                bookCountMonteCristo.getNameAuthor().getSonameAuthor());
+        System.out.println("bookCountMonteCristo.publisherYear = " + bookCountMonteCristo.getPublisherYear());
         System.out.println();
 
-        Book fathersAndChildren = new Book("Отцы и дети", authorTurgenev, 2002);
-        System.out.println("book1.bookName = " + fathersAndChildren.getBookName());
-        System.out.println("book1.nameAuthor = " + fathersAndChildren.getNameAuthor().getNameAuthor()+ " " +
-                fathersAndChildren.getNameAuthor().getSonameAuthor());
-        System.out.println("book1.publisherYear = " + fathersAndChildren.getPublisherYear());
+        Book bookFathersAndChildren = new Book("Отцы и дети", authorTurgenev, 2002);
+        System.out.println("bookFathersAndChildren.bookName = " + bookFathersAndChildren.getBookName());
+        System.out.println("bookFathersAndChildren.nameAuthor = " + bookFathersAndChildren.getNameAuthor().getNameAuthor() + " " +
+                bookFathersAndChildren.getNameAuthor().getSonameAuthor());
+        System.out.println("bookFathersAndChildren.publisherYear = " + bookFathersAndChildren.getPublisherYear());
         System.out.println();
 
         bookWarAndPeace.setPublisherYear(2006);
-        System.out.println("book1.bookName = " + bookWarAndPeace.getBookName());
-        System.out.println("book1.nameAuthor = " + bookWarAndPeace.getNameAuthor().getNameAuthor()+ " " +
+        System.out.println("bookWarAndPeace.bookName = " + bookWarAndPeace.getBookName());
+        System.out.println("bookWarAndPeace.nameAuthor = " + bookWarAndPeace.getNameAuthor().getNameAuthor() + " " +
                 bookWarAndPeace.getNameAuthor().getSonameAuthor());
-        System.out.println("book1.publisherYear = " + bookWarAndPeace.getPublisherYear());
+        System.out.println("bookWarAndPeace.publisherYear = " + bookWarAndPeace.getPublisherYear());
     }
 }
