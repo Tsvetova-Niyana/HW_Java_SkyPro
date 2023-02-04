@@ -1,12 +1,12 @@
 package pro.sky.java.course1.hw12ObjectsAndClasses;
 /*
-Создайте класс Book, который содержит в себе данные о названии, авторе и годе публикации книги. Типы полей
-должны быть String, Author (его мы создадим в п. 2) и int.
+Реализуйте методы toString, equals и hashCode в классах Author и Book, которые вы создали на прошлом уроке.
 
-Напишите конструкторы для обоих классов, заполняющие все поля.
-Создайте геттеры для всех полей автора и всех полей книги.
-Создайте сеттер для поля «Год публикации» у книги.
+Обратите внимание, что toString книги не должен дублировать код из toString автора,
+а должен делегировать (вызывать) его версию метода.
  */
+
+import java.util.Objects;
 
 public class Book {
     private String bookName;
@@ -33,5 +33,27 @@ public class Book {
 
     public void setPublisherYear(int publisherYear) {
         this.publisherYear = publisherYear;
+    }
+
+    @Override
+    public String toString() {
+        return "Название книги: " + bookName + "\nАвтор: " + nameAuthor + "\nГод издания: " + publisherYear + " г.";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+        Book book = (Book) o;
+
+        return Objects.equals(bookName, book.bookName) && Objects.equals(nameAuthor, book.nameAuthor)
+                && publisherYear == book.publisherYear;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bookName, nameAuthor, publisherYear);
     }
 }
